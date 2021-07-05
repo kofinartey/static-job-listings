@@ -1,13 +1,16 @@
 import React from "react";
-import JobsList from "./JobsList";
+import JobList from "./JobList";
+import data from "./data.json";
 import styles from "./styles/JobListingAppStyles";
 import { withStyles } from "@material-ui/styles";
 
-function JobListingApp() {
+function JobListingApp(props) {
+  const { classes } = props;
+
   return (
-    <div>
-      <h1>JOB LISTING APP</h1>
-      <JobsList />
+    <div className={classes.JobListingApp}>
+      <header className={classes.JobListing__header}></header>
+      <JobList jobData={data} />
     </div>
   );
 }
