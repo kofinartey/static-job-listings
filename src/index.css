@@ -8,6 +8,7 @@ body {
   font-family: "Spartan", sans-serif;
   font-weight: 700;
   min-width: 375px;
+  background-color: #f0fafb;
 }
 
 code {

@@ -2,22 +2,24 @@ const styles = {
   Job: {
     height: "100%",
     backgroundColor: "white",
-    padding: "2rem 2.5rem",
-    margin: "1.5rem 0",
+    padding: "2rem 1.5rem",
+    paddingBottom: ".5rem",
+    margin: "3rem 0",
     borderRadius: "1rem",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
     boxShadow: "0px 31px 20px -20px #D7EBEC",
+    position: "relative",
   },
+
   company__details: {
     display: "flex",
   },
   Job__logo: {
-    width: "5.5rem",
-    height: "5.5rem",
+    width: "3rem",
+    height: "3rem",
     borderRadius: "50%",
     backgroundColor: "lightgrey",
+    position: "absolute",
+    top: "-1.5rem",
   },
   Job__details: {
     height: "5.5rem",
@@ -25,7 +27,6 @@ const styles = {
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    marginLeft: "1rem",
     padding: ".4rem 0",
   },
   position: {
@@ -63,8 +64,17 @@ const styles = {
       marginRight: "1rem",
     },
   },
+
+  divider: {
+    width: "100%",
+    margin: " .5rem 0 1rem 0",
+  },
   skills: {
+    width: "100%",
+    textAlign: "left",
     // backgroundColor: "red",
+    // display: "flex",
+    // flexWrap: "wrap",
     "& button": {
       fontWeight: "600",
       color: "#5DA5A4",
@@ -72,13 +82,47 @@ const styles = {
       padding: ".5rem",
       border: "none",
       borderRadius: ".3rem",
-      marginRight: "1rem",
+      marginRight: ".8rem",
+      marginBottom: "1rem",
       cursor: "pointer",
       transition: "all .3s ease-in-out",
       "&:hover": {
         color: "white",
         backgroundColor: "#5DA5A4",
       },
+    },
+  },
+
+  "@media(min-width: 64rem)": {
+    Job: {
+      padding: "2rem 2.5rem",
+      margin: "1.5rem 0",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      // backgroundColor: "red",
+      // display: "flex",
+      // flexDirection: "column",
+      // justifyContent: "space-between",
+      // alignItems: "flex-start",
+    },
+    Job__details: {
+      width: "auto",
+      marginLeft: "1rem",
+      display: "flex",
+    },
+    Job__logo: {
+      width: "5.5rem",
+      height: "5.5rem",
+      position: "relative",
+      top: "0",
+    },
+    skills: {
+      width: "auto",
+      // backgroundColor: "red",
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "flex-end",
     },
   },
 };

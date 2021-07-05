@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 // import logos from "./images/Logos.js";
+import { Divider } from "@material-ui/core";
 import styles from "./styles/JobStyles.js";
 import { withStyles } from "@material-ui/styles";
 
 function Job(props) {
   const { data, classes, skills, addFilter } = props;
-
+  const [pageWidth, setPageWidth] = useState(window.innerWidth);
+  window.addEventListener("resize", () => {
+    let width = window.innerWidth;
+    setPageWidth(width);
+  });
   function handleFilter(e) {
     let selectedSkill = e.target.dataset.skillName;
     addFilter(selectedSkill);
@@ -43,6 +48,7 @@ function Job(props) {
         </div>
       </div>
 
+      {pageWidth < 1024 && <Divider className={classes.divider} />}
       {/* languages and tools */}
       <div className={classes.skills}>
         {skills.map((skill) => (

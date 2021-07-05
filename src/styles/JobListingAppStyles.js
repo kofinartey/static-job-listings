@@ -2,7 +2,6 @@ import bgMobile from "../images/bg-header-mobile.svg";
 import bgDesktop from "../images/bg-header-desktop.svg";
 const styles = {
   JobListingApp: {
-    backgroundColor: "#F0FAFB",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

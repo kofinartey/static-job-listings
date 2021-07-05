@@ -14,12 +14,14 @@ function JobList({ classes, jobData }) {
       setJobFilters([...jobFilters, newFilter]);
     }
   }
-
   const removeFilter = (filterToRemove) => {
     let newFilterList = jobFilters.filter(
       (filter) => filter !== filterToRemove
     );
     setJobFilters(newFilterList);
+  };
+  const clearFilters = () => {
+    setJobFilters([]);
   };
 
   function renderJob(data) {
@@ -65,7 +67,11 @@ function JobList({ classes, jobData }) {
     <div className={classes.JobList}>
       {/* render filter bar if filters have been selected */}
       {jobFilters.length > 0 && (
-        <FilterBar filters={jobFilters} removeFilter={removeFilter} />
+        <FilterBar
+          filters={jobFilters}
+          removeFilter={removeFilter}
+          clearFilters={clearFilters}
+        />
       )}
       {displayJob()}
     </div>
