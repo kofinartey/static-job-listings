@@ -100,11 +100,6 @@ const styles = {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      // backgroundColor: "red",
-      // display: "flex",
-      // flexDirection: "column",
-      // justifyContent: "space-between",
-      // alignItems: "flex-start",
     },
     Job__details: {
       width: "auto",
