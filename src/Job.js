@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { FilterContext } from "./contexts/FilterContext";
 // import logos from "./images/Logos.js";
 import logo from "./images/insure.svg";
 import { Divider } from "@material-ui/core";
@@ -6,7 +7,8 @@ import styles from "./styles/JobStyles.js";
 import { withStyles } from "@material-ui/styles";
 
 function Job(props) {
-  const { data, classes, skills, addFilter } = props;
+  const { addFilter } = useContext(FilterContext);
+  const { data, classes, skills } = props;
   const [pageWidth, setPageWidth] = useState(window.innerWidth);
   window.addEventListener("resize", () => {
     let width = window.innerWidth;
