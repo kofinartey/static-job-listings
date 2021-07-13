@@ -31,7 +31,7 @@ function Job(props) {
       {/* company details */}
       <div className={classes.company__details}>
         <div className={classes.Job__logo}>
-          <img src={logo} alt={`${data.company} logo`} />
+          <img src={data.logo} alt={`${data.company} logo`} />
         </div>
         <div className={classes.Job__details}>
           <div className={classes.Job__company}>
