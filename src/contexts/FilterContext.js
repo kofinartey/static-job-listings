@@ -22,7 +22,7 @@ export const FilterProvider = (props) => {
   const clearFilters = () => {
     setJobFilters([]);
   };
-  console.log(jobData);
+
   const value = {
     jobData,
     jobFilters,

@@ -11,11 +11,7 @@ function JobList({ classes }) {
   function renderJob(data) {
     const job = data.map((job) => {
       let skills = [job.role, job.level, ...job.languages, ...job.tools];
-      return (
-        <div>
-          <Job data={job} key={job.id} skills={skills} />
-        </div>
-      );
+      return <Job data={job} key={job.company} skills={skills} />;
     });
     return job;
   }
@@ -30,11 +26,7 @@ function JobList({ classes }) {
       });
       const job = newJobs.map((job) => {
         let skills = [job.role, job.level, ...job.languages, ...job.tools];
-        return (
-          <div>
-            <Job data={job} key={job.id} skills={skills} />
-          </div>
-        );
+        return <Job data={job} key={job.id} skills={skills} />;
       });
       return job;
     }

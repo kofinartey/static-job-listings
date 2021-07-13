@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { FilterContext } from "./contexts/FilterContext";
 // import logos from "./images/Logos.js";
-import logo from "./images/insure.svg";
+// import logo from "./images/insure.svg";
 import { Divider } from "@material-ui/core";
 import styles from "./styles/JobStyles.js";
 import { withStyles } from "@material-ui/styles";
